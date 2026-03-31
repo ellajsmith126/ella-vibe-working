@@ -20,7 +20,7 @@ export function TabNav({ activeTab, onTabChange }: TabNavProps) {
   }, [activeTab])
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 dark:bg-bg-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+    <nav className="sticky top-0 z-50 bg-white/90 dark:bg-bg-deep/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
       <div className="mx-auto flex max-w-4xl items-center px-6">
         <div
           className="flex flex-1 gap-1 overflow-x-auto"
@@ -37,7 +37,7 @@ export function TabNav({ activeTab, onTabChange }: TabNavProps) {
               className={`whitespace-nowrap px-4 py-4 text-sm font-medium transition-colors duration-150 border-b-[3px] ${
                 activeTab === tab.id
                   ? 'border-primary text-primary'
-                  : 'border-transparent text-text-muted hover:text-text dark:hover:text-text-dark'
+                  : 'border-transparent text-text-muted hover:text-text-main dark:hover:text-text-light'
               }`}
               style={{ minHeight: 44 }}
             >

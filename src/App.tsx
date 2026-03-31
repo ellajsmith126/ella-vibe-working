@@ -26,7 +26,7 @@ export default function App() {
   const { activeTab, setActiveTab } = useTabState()
 
   return (
-    <div className="min-h-screen bg-white dark:bg-bg-dark text-text dark:text-text-dark transition-colors duration-150">
+    <div className="min-h-screen bg-white dark:bg-bg-deep text-text-main dark:text-text-light transition-colors duration-150">
       <ErrorBoundary>
         <Hero />
         <TabNav activeTab={activeTab} onTabChange={setActiveTab} />
@@ -35,10 +35,10 @@ export default function App() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -4 }}
-                transition={{ duration: 0.15, ease: 'easeOut' }}
+                initial={{ opacity: 0, y: 16, scale: 0.99 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
                 <TabContent activeTab={activeTab} />
               </motion.div>

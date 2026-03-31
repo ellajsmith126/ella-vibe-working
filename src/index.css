@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (Tailwind v4) */
+@variant dark (&:where(.dark, .dark *));
+
 /* Editorial Design System — Pink/Coral/Turquoise */
 @theme {
   --color-primary: #E91E78;
@@ -8,11 +11,11 @@
   --color-accent: #40E0D0;
   --color-accent-dark: #2BB5A7;
   --color-surface: #FFF0F5;
-  --color-surface-dark: #25253E;
-  --color-text: #1A1A2E;
-  --color-text-dark: #F0F0F5;
+  --color-surface-dim: #25253E;
+  --color-text-main: #1A1A2E;
+  --color-text-light: #F0F0F5;
   --color-text-muted: #6B7280;
-  --color-bg-dark: #1A1A2E;
+  --color-bg-deep: #1A1A2E;
 
   --font-sans: 'Inter', system-ui, sans-serif;
 }

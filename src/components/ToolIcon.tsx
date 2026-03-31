@@ -26,7 +26,7 @@ export function ToolIcon({ iconUrl, monogramFallback, brandColor, name }: ToolIc
   }
 
   return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-[10px] bg-white dark:bg-surface-dark">
+    <div className="flex h-12 w-12 items-center justify-center rounded-[10px] bg-white dark:bg-surface-dim">
       <img
         src={iconUrl}
         alt={`${name} icon`}

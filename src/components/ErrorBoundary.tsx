@@ -32,8 +32,8 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         this.props.fallback ?? (
           <div className="flex items-center justify-center p-12">
-            <div className="rounded-xl border border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-surface-dark">
-              <p className="text-base text-text dark:text-text-dark">
+            <div className="rounded-xl border border-gray-200 bg-white p-8 text-center dark:border-gray-700 dark:bg-surface-dim">
+              <p className="text-base text-text-main dark:text-text-light">
                 Something went wrong. Please refresh the page.
               </p>
             </div>

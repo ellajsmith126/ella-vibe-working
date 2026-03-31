@@ -77,12 +77,12 @@ export const tools: Tool[] = [
     role: 'Building landing pages, web apps, and interactive tools',
   },
   {
-    name: 'Kling',
+    name: 'Google AI Studio',
     category: 'building',
-    iconUrl: null,
-    monogramFallback: 'KL',
+    iconUrl: 'https://cdn.simpleicons.org/google/40E0D0',
+    monogramFallback: 'GA',
     brandColor: '#40E0D0',
-    role: 'Creative visual content alongside Claude Code',
+    role: 'Prototyping, experimenting with models, and testing prompts at speed',
   },
   {
     name: 'Super Prompts',

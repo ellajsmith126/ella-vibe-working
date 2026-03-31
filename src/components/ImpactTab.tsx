@@ -4,8 +4,8 @@ import { ImpactCard } from './ImpactCard'
 export function ImpactTab() {
   return (
     <div className="space-y-4">
-      {impactItems.map((item) => (
-        <ImpactCard key={item.id} item={item} />
+      {impactItems.map((item, index) => (
+        <ImpactCard key={item.id} item={item} index={index} />
       ))}
     </div>
   )
