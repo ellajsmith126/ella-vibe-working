@@ -1,5 +1,3 @@
-export type TabId = 'tools' | 'workflows' | 'impact' | 'personal'
-
 export interface Tool {
   name: string
   category: 'thinking' | 'writing' | 'organising' | 'building'
@@ -33,6 +31,21 @@ export interface PersonalItem {
   output: string
   outputType: 'text' | 'image' | 'both'
   outputExpanded: string
+}
+
+export interface SectionStat {
+  label: string
+  value: string
+}
+
+export interface TileConfig {
+  id: string
+  label: string
+  title: string
+  description: string
+  accentColor: string
+  colSpan: 1 | 2
+  stats: SectionStat[]
 }
 
 export const tools: Tool[] = [
@@ -206,16 +219,71 @@ export const personalItems: PersonalItem[] = [
 export const personalIntroCopy =
   "This is where I took initiative and expanded Vibe Working beyond work — nobody asked me to do this, it just made sense once I saw how well it worked professionally."
 
-export const TABS = [
-  { id: 'tools' as TabId, label: 'Tools & Stack' },
-  { id: 'workflows' as TabId, label: 'Workflows & Outputs' },
-  { id: 'impact' as TabId, label: 'Impact' },
-  { id: 'personal' as TabId, label: 'Personal Life' },
-]
-
 export const CATEGORY_LABELS: Record<Tool['category'], string> = {
   thinking: 'Thinking',
   writing: 'Writing',
   organising: 'Organising',
   building: 'Building & Automating',
 }
+
+export const tileConfigs: TileConfig[] = [
+  {
+    id: 'tools',
+    label: 'Tools & Stack',
+    title: 'My AI Toolkit',
+    description: '10 tools across thinking, writing, building & organising',
+    accentColor: '#40E0D0',
+    colSpan: 2,
+    stats: [
+      { label: 'Tools mastered', value: '10' },
+      { label: 'Categories', value: '4' },
+      { label: 'Usage frequency', value: 'Daily' },
+    ],
+  },
+  {
+    id: 'workflows',
+    label: 'Workflows & Outputs',
+    title: 'Systems I Built',
+    description: 'Real outputs from AI-powered processes',
+    accentColor: '#E91E78',
+    colSpan: 1,
+    stats: [
+      { label: 'Workflows', value: '3' },
+      { label: 'Outputs attached', value: 'Real' },
+    ],
+  },
+  {
+    id: 'impact',
+    label: 'Impact',
+    title: 'Before → After',
+    description: 'How AI transformed key areas of my work',
+    accentColor: '#FF6B9D',
+    colSpan: 1,
+    stats: [
+      { label: 'Faster output', value: '4×' },
+      { label: 'Confidence', value: '↑89%' },
+      { label: 'Systems built', value: '10+' },
+    ],
+  },
+  {
+    id: 'demo',
+    label: 'Live Demo',
+    title: 'See It In Action',
+    description: 'An embedded example of something built with AI',
+    accentColor: '#40E0D0',
+    colSpan: 2,
+    stats: [],
+  },
+  {
+    id: 'personal',
+    label: 'Beyond Work',
+    title: 'Personal Life',
+    description: 'AI in running, routines & life decisions',
+    accentColor: '#FF6B9D',
+    colSpan: 1,
+    stats: [
+      { label: 'Areas', value: '3' },
+      { label: 'Approach', value: 'Same system' },
+    ],
+  },
+]

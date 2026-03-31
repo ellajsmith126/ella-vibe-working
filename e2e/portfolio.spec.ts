@@ -1,37 +1,47 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('Portfolio', () => {
-  test('loads with hero and default tools tab', async ({ page }) => {
+  test('loads with hero content', async ({ page }) => {
     await page.goto('/')
-    await expect(page.getByText("Ella's AI System,")).toBeVisible()
-    await expect(page.getByRole('tab', { name: 'Tools & Stack' })).toHaveAttribute('aria-selected', 'true')
+    await expect(page.getByText('ELLA SMITH')).toBeVisible()
+    await expect(page.getByText('Ella Vibe Working')).toBeVisible()
   })
 
-  test('navigates between tabs', async ({ page }) => {
+  test('displays all bento tiles', async ({ page }) => {
     await page.goto('/')
-    await page.getByRole('tab', { name: 'Impact' }).click()
-    await expect(page.getByText('Before').first()).toBeVisible()
-
-    await page.getByRole('tab', { name: 'Personal Life' }).click()
-    await expect(page.getByText('nobody asked me to do this')).toBeVisible()
+    await expect(page.getByText('My AI Toolkit')).toBeVisible()
+    await expect(page.getByText('Systems I Built')).toBeVisible()
+    await expect(page.getByText('Before → After')).toBeVisible()
+    await expect(page.getByText('See It In Action')).toBeVisible()
+    await expect(page.getByText('Personal Life')).toBeVisible()
   })
 
-  test('syncs tab with URL', async ({ page }) => {
-    await page.goto('/?tab=impact')
-    await expect(page.getByRole('tab', { name: 'Impact' })).toHaveAttribute('aria-selected', 'true')
+  test('opens expanded view when tile is clicked', async ({ page }) => {
+    await page.goto('/')
+    await page.getByText('My AI Toolkit').click()
+    await expect(page.getByText('Tools mastered')).toBeVisible()
+    await expect(page.getByText('Claude Projects')).toBeVisible()
+  })
+
+  test('closes expanded view', async ({ page }) => {
+    await page.goto('/')
+    await page.getByText('My AI Toolkit').click()
+    await expect(page.getByText('Tools mastered')).toBeVisible()
+    await page.getByLabel('Close expanded view').click()
+    await expect(page.getByText('Tools mastered')).not.toBeVisible()
   })
 
   test('toggles dark mode', async ({ page }) => {
     await page.goto('/')
-    const toggle = page.getByRole('button', { name: /Switch to dark mode/i })
+    const toggle = page.getByRole('button', { name: /Switch to/i })
     await toggle.click()
     await expect(page.locator('html')).toHaveClass(/dark/)
   })
 
-  test('expands workflow card', async ({ page }) => {
-    await page.goto('/?tab=workflows')
-    const expandButton = page.getByRole('button', { name: /View full output/i }).first()
-    await expandButton.click()
-    await expect(page.getByRole('button', { name: /Hide full output/i }).first()).toBeVisible()
+  test('shows impact stats in expanded view', async ({ page }) => {
+    await page.goto('/')
+    await page.getByText('Before → After').click()
+    await expect(page.getByText('AI Capability Understanding')).toBeVisible()
+    await expect(page.getByText('Confidence improved massively in weeks')).toBeVisible()
   })
 })

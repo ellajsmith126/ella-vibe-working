@@ -3,7 +3,7 @@
 /* Enable class-based dark mode (Tailwind v4) */
 @variant dark (&:where(.dark, .dark *));
 
-/* Editorial Design System — Pink/Coral/Turquoise */
+/* Creative & Experimental Design System */
 @theme {
   --color-primary: #E91E78;
   --color-primary-hover: #D4166B;
@@ -16,8 +16,43 @@
   --color-text-light: #F0F0F5;
   --color-text-muted: #6B7280;
   --color-bg-deep: #1A1A2E;
+  --color-bg-deeper: #12121f;
 
   --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Blob drift animations */
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(-30px, 20px) rotate(5deg) scale(1.05); }
+  66% { transform: translate(15px, -10px) rotate(-3deg) scale(0.95); }
+}
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(25px, -15px) rotate(-5deg) scale(1.08); }
+  66% { transform: translate(-20px, 10px) rotate(3deg) scale(0.96); }
+}
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15px, 10px) scale(1.1); }
+}
+
+/* Particle float */
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { transform: translateY(-18px) translateX(8px); opacity: 0.8; }
+}
+
+/* Scroll indicator pulse */
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; top: 6px; }
+  50% { opacity: 1; top: 16px; }
+}
+
+/* Tile blob pulse */
+@keyframes tile-blob-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 0.8; }
 }
 
 /* Reduced motion */
