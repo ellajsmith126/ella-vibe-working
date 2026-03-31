@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Editorial Design System — Pink/Coral/Turquoise */
+@theme {
+  --color-primary: #E91E78;
+  --color-primary-hover: #D4166B;
+  --color-primary-light: #FF6B9D;
+  --color-accent: #40E0D0;
+  --color-accent-dark: #2BB5A7;
+  --color-surface: #FFF0F5;
+  --color-surface-dark: #25253E;
+  --color-text: #1A1A2E;
+  --color-text-dark: #F0F0F5;
+  --color-text-muted: #6B7280;
+  --color-bg-dark: #1A1A2E;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
