@@ -5,8 +5,8 @@ interface NavProps {
 const links = [
   { href: '#stack', label: 'Stack' },
   { href: '#impact', label: 'Impact' },
-  { href: '#systems', label: 'Systems' },
   { href: '#life', label: 'Life' },
+  { href: '#systems', label: 'Systems' },
   { href: '#demo', label: 'Demo' },
 ];
 

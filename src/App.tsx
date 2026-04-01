@@ -7,7 +7,7 @@ import { Systems } from './components/Systems';
 import { PersonalLife } from './components/PersonalLife';
 import { Demo } from './components/Demo';
 
-const sectionIds = ['stack', 'impact', 'systems', 'life', 'demo'];
+const sectionIds = ['stack', 'impact', 'life', 'systems', 'demo'];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('stack');
@@ -34,8 +34,8 @@ export default function App() {
       <Hero />
       <Toolkit />
       <Impact />
-      <Systems />
       <PersonalLife />
+      <Systems />
       <Demo />
     </>
   );
