@@ -1,23 +1,42 @@
-import { ErrorBoundary } from './components/ErrorBoundary'
-import { HeroSection } from './components/HeroSection'
-import { BentoGrid } from './components/BentoGrid'
-import { DarkModeToggle } from './components/DarkModeToggle'
+import { useState, useEffect } from 'react';
+import { Nav } from './components/Nav';
+import { Hero } from './components/Hero';
+import { Toolkit } from './components/Toolkit';
+import { Impact } from './components/Impact';
+import { Systems } from './components/Systems';
+import { PersonalLife } from './components/PersonalLife';
+import { Demo } from './components/Demo';
+
+const sectionIds = ['stack', 'systems', 'impact', 'life', 'demo'];
 
 export default function App() {
+  const [activeSection, setActiveSection] = useState('stack');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = '';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 80) {
+          current = id;
+        }
+      }
+      if (current) setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-bg-deeper text-text-light">
-      <ErrorBoundary>
-        <DarkModeToggle />
-        <HeroSection />
-        <main>
-          <ErrorBoundary>
-            <BentoGrid />
-          </ErrorBoundary>
-        </main>
-        <footer className="max-w-[1100px] mx-auto px-6 py-8 text-center text-sm" style={{ color: 'rgba(255,255,255,0.25)' }}>
-          Built with Vibe Working
-        </footer>
-      </ErrorBoundary>
-    </div>
-  )
+    <>
+      <Nav activeSection={activeSection} />
+      <Hero />
+      <Toolkit />
+      <Impact />
+      <Systems />
+      <PersonalLife />
+      <Demo />
+    </>
+  );
 }
