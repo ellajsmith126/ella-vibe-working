@@ -115,25 +115,25 @@ export function Hero() {
           <span className="hero-period">.</span>
         </h1>
         <p className="hero-sub">
-          This is a look at the tools I use, the systems I've built, and what's
-          actually changed. Work, personal life, the whole thing.
+          This Is A Look At The Tools I Use, The Systems I've Built, And What's
+          Actually Changed. Work, Personal Life, The Whole Thing.
         </p>
         <div className="hero-stats">
           <div>
             <div className="hstat-num">
               {stat1.value}{stat1.done && <em>+</em>}
             </div>
-            <div className="hstat-label">Tools mastered</div>
+            <div className="hstat-label">Tools Mastered</div>
           </div>
           <div>
             <div className="hstat-num">
               {stat2.value}{stat2.done && <em>&times;</em>}
             </div>
-            <div className="hstat-label">Faster output</div>
+            <div className="hstat-label">Faster Output</div>
           </div>
           <div>
             <div className="hstat-num">{stat3.value}</div>
-            <div className="hstat-label">Weeks to build this</div>
+            <div className="hstat-label">Weeks To Build This</div>
           </div>
         </div>
       </div>

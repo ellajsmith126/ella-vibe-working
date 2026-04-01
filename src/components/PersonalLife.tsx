@@ -12,37 +12,37 @@ const cards: PersonalCard[] = [
     cardClass: 'pc1',
     iconBg: 'rgba(236,72,153,0.15)',
     emoji: '\uD83C\uDF19',
-    title: 'Evening closure ritual',
+    title: 'Evening Closure Ritual',
     bullets: [
-      'Difficulty switching off after work',
-      'AI coaching reframed it as a closure problem, not a discipline one',
-      'Built a daily ritual: review, capture, close',
+      'Difficulty Switching Off After Work',
+      'AI Coaching Reframed It As A Closure Problem, Not A Discipline One',
+      'Built A Daily Ritual: Review, Capture, Close',
     ],
-    outcome: '→ Evenings noticeably better',
+    outcome: '→ Evenings Noticeably Better',
   },
   {
     cardClass: 'pc2',
     iconBg: 'rgba(14,165,233,0.15)',
     emoji: '\uD83E\uDDB5',
-    title: 'Knee rehab programme',
+    title: 'Knee Rehab Programme',
     bullets: [
-      "Sore knee from running — physio wasn't helping",
-      'Loaded symptoms, history & goals into AI',
-      'Built a personalised strength programme where physio had failed',
+      "Sore Knee From Running — Physio Wasn't Helping",
+      'Loaded Symptoms, History & Goals Into AI',
+      'Built A Personalised Strength Programme Where Physio Had Failed',
     ],
-    outcome: '→ Back running with a programme that actually worked',
+    outcome: '→ Back Running With A Programme That Actually Worked',
   },
   {
     cardClass: 'pc3',
     iconBg: 'rgba(16,185,129,0.15)',
     emoji: '\uD83E\uDDE0',
-    title: 'Personal decisions',
+    title: 'Personal Decisions',
     bullets: [
-      'Decision fatigue from daily personal admin',
-      'Same process as work: load context, talk it through',
-      'Meal planning, travel, big purchases — all faster',
+      'Decision Fatigue From Daily Personal Admin',
+      'Same Process As Work: Load Context, Talk It Through',
+      'Meal Planning, Travel, Big Purchases — All Faster',
     ],
-    outcome: '→ Less mental overhead daily',
+    outcome: '→ Less Mental Overhead Daily',
   },
 ];
 
@@ -50,10 +50,10 @@ export function PersonalLife() {
   return (
     <section className="section" id="life">
       <div className="eyebrow">Beyond Work</div>
-      <h2 className="sec-title">Personal life</h2>
+      <h2 className="sec-title">Personal Life</h2>
       <p className="sec-sub">
-        The same habits I use at work are already part of how I live outside it
-        too.
+        The Same Habits I Use At Work Are Already Part Of How I Live Outside It
+        Too.
       </p>
 
       <div className="personal-grid">

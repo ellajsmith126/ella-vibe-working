@@ -12,68 +12,68 @@ interface WorkflowData {
 const workflows: WorkflowData[] = [
   {
     cardClass: 'wfc1', numClass: 'wn1', outputClass: 'wo1', num: 1,
-    title: 'Claude Projects with personal style guide',
+    title: 'Claude Projects With Personal Style Guide',
     bullets: [
-      'AI results were generic — needed constant re-explaining',
-      'Loaded Claude Projects with style guide, role context, project info',
-      'Everything comes back in my voice, not generic AI output',
-      'Replicated across 4 active projects',
+      'AI Results Were Generic — Needed Constant Re-Explaining',
+      'Loaded Claude Projects With Style Guide, Role Context, Project Info',
+      'Everything Comes Back In My Voice, Not Generic AI Output',
+      'Replicated Across 4 Active Projects',
     ],
-    output: '→ Single biggest improvement in AI usefulness',
+    output: '→ Single Biggest Improvement In AI Usefulness',
   },
   {
     cardClass: 'wfc2', numClass: 'wn2', outputClass: 'wo2', num: 2,
-    title: 'All documentation routed through AI',
+    title: 'All Documentation Routed Through AI',
     bullets: [
-      'Writing docs manually was slow and inconsistent',
-      'Everything now goes through AI with style guide pre-loaded',
-      'Covers briefs, reports, internal comms, planning docs',
-      'Consistent voice across every piece of output',
+      'Writing Docs Manually Was Slow And Inconsistent',
+      'Everything Now Goes Through AI With Style Guide Pre-Loaded',
+      'Covers Briefs, Reports, Internal Comms, Planning Docs',
+      'Consistent Voice Across Every Piece Of Output',
     ],
-    output: '→ Docs take 20 mins not 90',
+    output: '→ Docs Take 20 Mins Not 90',
   },
   {
     cardClass: 'wfc3', numClass: 'wn3', outputClass: 'wo3', num: 3,
-    title: 'Specialist Chains for deep learning',
+    title: 'Specialist Chains For Deep Learning',
     bullets: [
-      'Complex areas are hard to learn end-to-end from a single prompt',
-      'Specialist Chains break topics into components and go deep on each',
-      'Systematic understanding built layer by layer',
-      'Used across social media, marketing strategy, and AI tooling',
+      'Complex Areas Are Hard To Learn End-To-End From A Single Prompt',
+      'Specialist Chains Break Topics Into Components And Go Deep On Each',
+      'Systematic Understanding Built Layer By Layer',
+      'Used Across Social Media, Marketing Strategy, And AI Tooling',
     ],
-    output: '→ Expert-level understanding without a course or a book',
+    output: '→ Expert-Level Understanding Without A Course Or A Book',
   },
   {
     cardClass: 'wfc4', numClass: 'wn4', outputClass: 'wo4', num: 4,
-    title: 'PRDs to build software',
+    title: 'PRDs To Build Software',
     bullets: [
-      'Had ideas for tools but no developer background',
-      'Wrote Product Requirement Docs with AI, then used Claude Code to build',
-      'Turned concepts into working software — including this portfolio',
-      'Closed the gap between idea and real working product',
+      'Had Ideas For Tools But No Developer Background',
+      'Wrote Product Requirement Docs With AI, Then Used Claude Code To Build',
+      'Turned Concepts Into Working Software — Including This Portfolio',
+      'Closed The Gap Between Idea And Real Working Product',
     ],
-    output: '→ Non-developer building real software',
+    output: '→ Non-Developer Building Real Software',
   },
   {
     cardClass: 'wfc5', numClass: 'wn5', outputClass: 'wo5', num: 5,
-    title: 'Social media strategy framework',
+    title: 'Social Media Strategy Framework',
     wip: true,
     bullets: [
-      'Using Solving framework + Super Prompts to work through social media as an area',
-      'Breaking down each component systematically rather than ad-hoc',
-      'Specialist Chains planned to go deeper into each area',
-      'Every session builds on the last',
+      'Using Solving Framework + Super Prompts To Work Through Social Media As An Area',
+      'Breaking Down Each Component Systematically Rather Than Ad-Hoc',
+      'Specialist Chains Planned To Go Deeper Into Each Area',
+      'Every Session Builds On The Last',
     ],
-    output: '→ Ongoing — structured from day one, not reactive',
+    output: '→ Ongoing — Structured From Day One, Not Reactive',
   },
 ];
 
 export function Systems() {
   return (
     <section className="section" id="systems">
-      <div className="eyebrow">Workflows &amp; Outputs</div>
-      <h2 className="sec-title">Systems I built</h2>
-      <p className="sec-sub">Real processes running in my work today</p>
+      <div className="eyebrow">Workflows & Outputs</div>
+      <h2 className="sec-title">Systems I Built</h2>
+      <p className="sec-sub">Real Processes Running In My Work Today</p>
 
       <div className="wf-list">
         {workflows.map((wf) => (
@@ -83,7 +83,7 @@ export function Systems() {
               <div>
                 <div className="wf-title">
                   {wf.title}
-                  {wf.wip && <span className="wip-tag">In progress</span>}
+                  {wf.wip && <span className="wip-tag">In Progress</span>}
                 </div>
                 <ul className="wf-bullets">
                   {wf.bullets.map((b, i) => (
