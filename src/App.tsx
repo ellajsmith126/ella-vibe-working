@@ -7,7 +7,7 @@ import { Systems } from './components/Systems';
 import { PersonalLife } from './components/PersonalLife';
 import { Demo } from './components/Demo';
 
-const sectionIds = ['stack', 'systems', 'impact', 'life', 'demo'];
+const sectionIds = ['stack', 'impact', 'systems', 'life', 'demo'];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('stack');
