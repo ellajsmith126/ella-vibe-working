@@ -7,17 +7,17 @@ export function Demo() {
         An interactive tool built entirely with AI — try it yourself
       </p>
       <div className="demo-card">
-        <div className="demo-title">Vibe Working Portfolio Judge</div>
+        <div className="demo-title">2-Sec Fix</div>
         <p className="demo-sub">
-          Paste any AI portfolio and get a full scored evaluation across 10
-          dimensions.
-          <br />
-          Built with Claude Code in one session. This is what building with AI
-          actually looks like.
+          A tool built entirely with AI — try it yourself.
         </p>
-        <div className="demo-placeholder">… Embed your demo here</div>
-        <a href="#" className="demo-btn">
-          Try the judge →
+        <a
+          href="https://2-sec-fix.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="demo-btn"
+        >
+          Try it →
         </a>
       </div>
     </section>
