@@ -98,9 +98,12 @@ export function Impact() {
       </div>
 
       <div className="impact-row">
-        {cards.map((card, i) => (
-          <BeforeAfterCard key={i} card={card} />
-        ))}
+        <BeforeAfterCard card={cards[0]} />
+        <BeforeAfterCard card={cards[1]} />
+      </div>
+      <div className="impact-row" style={{ marginBottom: 0 }}>
+        <BeforeAfterCard card={cards[2]} />
+        <BeforeAfterCard card={cards[3]} />
       </div>
     </section>
   );
