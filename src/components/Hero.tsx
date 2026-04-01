@@ -57,7 +57,6 @@ function DotGrid() {
         for (let c = 0; c < cols; c++) {
           const x = c * spacing;
           const y = r * spacing;
-          // each dot has a unique phase offset
           const phase = (r * cols + c) * 0.4;
           const breathe = 0.03 + 0.03 * Math.sin(time * 0.001 + phase);
           ctx.beginPath();
@@ -115,25 +114,25 @@ export function Hero() {
           <span className="hero-period">.</span>
         </h1>
         <p className="hero-sub">
-          This Is A Look At The Tools I Use, The Systems I've Built, And What's
-          Actually Changed. Work, Personal Life, The Whole Thing.
+          This is a look at the tools I use, the systems I've built, and what's
+          actually changed. Work, personal life, the whole thing.
         </p>
         <div className="hero-stats">
           <div>
             <div className="hstat-num">
               {stat1.value}{stat1.done && <em>+</em>}
             </div>
-            <div className="hstat-label">Tools Mastered</div>
+            <div className="hstat-label">Tools mastered</div>
           </div>
           <div>
             <div className="hstat-num">
               {stat2.value}{stat2.done && <em>&times;</em>}
             </div>
-            <div className="hstat-label">Faster Output</div>
+            <div className="hstat-label">Faster output</div>
           </div>
           <div>
             <div className="hstat-num">{stat3.value}</div>
-            <div className="hstat-label">Weeks To Build This</div>
+            <div className="hstat-label">Weeks to build this</div>
           </div>
         </div>
       </div>

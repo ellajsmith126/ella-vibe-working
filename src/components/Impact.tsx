@@ -12,30 +12,30 @@ const cards: BeforeAfterData[] = [
   {
     accentColor: '#0ea5e9',
     title: 'AI Capability & Output Quality',
-    before: ['Basic Text Gen Only', 'Constant Re-Explaining Context', 'Generic AI Responses'],
-    after: ['Builds Apps & Pages', 'Context Loaded Once, Used Always', 'Output In My Voice'],
-    footer: 'From Zero To Builder',
+    before: ['Basic text gen only', 'Constant re-explaining context', 'Generic AI responses'],
+    after: ['Builds apps & pages', 'Context loaded once, used always', 'Output in my voice'],
+    footer: 'From zero to builder',
   },
   {
     accentColor: '#10b981',
     title: 'Learning & Knowledge Speed',
-    before: ['Months To Learn New Areas', 'Knowledge Bottleneck Everywhere', 'Starting From Scratch Each Time'],
-    after: ['Expert Knowledge In Hours', 'Every Output Builds On The Last', 'Compounding System'],
-    footer: 'Bottleneck Gone Entirely',
+    before: ['Months to learn new areas', 'Knowledge bottleneck everywhere', 'Starting from scratch each time'],
+    after: ['Expert knowledge in hours', 'Every output builds on the last', 'Compounding system'],
+    footer: 'Bottleneck gone entirely',
   },
   {
     accentColor: '#f59e0b',
     title: 'Self-Awareness & Growth',
-    before: ['Blind To Own Habits & Patterns', 'Self-Doubt With No Structure', 'No Way To Track Improvement'],
-    after: ['Coaching Surfaces Bottlenecks', 'Patterns Identified & Addressed', 'Can See Improvement, Not Just Hope'],
-    footer: 'From Guessing To Knowing',
+    before: ['Blind to own habits & patterns', 'Self-doubt with no structure', 'No way to track improvement'],
+    after: ['Coaching surfaces bottlenecks', 'Patterns identified & addressed', 'Can see improvement, not just hope'],
+    footer: 'From guessing to knowing',
   },
   {
     accentColor: '#ec4899',
     title: 'Building Tools & Software',
-    before: ["Couldn't Build Tools Or Software", 'Dependent On Developers', 'Ideas Stuck As Ideas'],
-    after: ['Landing Pages, Web Apps, Tools', 'Built This Portfolio Solo', 'Ideas Become Real Software'],
-    footer: 'Non-Developer Who Now Builds Software',
+    before: ["Couldn't build tools or software", 'Dependent on developers', 'Ideas stuck as ideas'],
+    after: ['Landing pages, web apps, tools', 'Built this portfolio solo', 'Ideas become real software'],
+    footer: 'Non-developer who now builds software',
   },
 ];
 
@@ -81,26 +81,26 @@ export function Impact() {
     <section className="section" id="impact">
       <div className="eyebrow">Impact</div>
       <h2 className="sec-title">Before &rarr; After</h2>
-      <p className="sec-sub">What Actually Changed</p>
+      <p className="sec-sub">What actually changed</p>
 
       <div className="stats-strip">
         <div className="big-stat bs1">
           <div className="big-num">
             4<span style={{ color: '#0ea5e9' }}>&times;</span>
           </div>
-          <div className="big-label">Faster Output</div>
+          <div className="big-label">Faster output</div>
         </div>
         <div className="big-stat bs2">
           <div className="big-num">
             <span style={{ color: '#ec4899' }}>&uarr;</span>89%
           </div>
-          <div className="big-label">Confidence (Self-Assessed)</div>
+          <div className="big-label">Confidence (self-assessed)</div>
         </div>
         <div className="big-stat bs3">
           <div className="big-num">
             10<span style={{ color: '#10b981' }}>+</span>
           </div>
-          <div className="big-label">Systems Built</div>
+          <div className="big-label">Systems built</div>
         </div>
       </div>
 

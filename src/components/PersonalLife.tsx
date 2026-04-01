@@ -14,11 +14,11 @@ const cards: PersonalCard[] = [
     emoji: '\uD83C\uDF19',
     title: 'Evening Closure Ritual',
     bullets: [
-      'Difficulty Switching Off After Work',
-      'AI Coaching Reframed It As A Closure Problem, Not A Discipline One',
-      'Built A Daily Ritual: Review, Capture, Close',
+      'Difficulty switching off after work',
+      'AI coaching reframed it as a closure problem, not a discipline one',
+      'Built a daily ritual: review, capture, close',
     ],
-    outcome: '→ Evenings Noticeably Better',
+    outcome: '→ Evenings noticeably better',
   },
   {
     cardClass: 'pc2',
@@ -26,11 +26,11 @@ const cards: PersonalCard[] = [
     emoji: '\uD83E\uDDB5',
     title: 'Knee Rehab Programme',
     bullets: [
-      "Sore Knee From Running — Physio Wasn't Helping",
-      'Loaded Symptoms, History & Goals Into AI',
-      'Built A Personalised Strength Programme Where Physio Had Failed',
+      "Sore knee from running — physio wasn't helping",
+      'Loaded symptoms, history & goals into AI',
+      'Built a personalised strength programme where physio had failed',
     ],
-    outcome: '→ Back Running With A Programme That Actually Worked',
+    outcome: '→ Back running with a programme that actually worked',
   },
   {
     cardClass: 'pc3',
@@ -38,11 +38,11 @@ const cards: PersonalCard[] = [
     emoji: '\uD83E\uDDE0',
     title: 'Personal Decisions',
     bullets: [
-      'Decision Fatigue From Daily Personal Admin',
-      'Same Process As Work: Load Context, Talk It Through',
-      'Meal Planning, Travel, Big Purchases — All Faster',
+      'Decision fatigue from daily personal admin',
+      'Same process as work: load context, talk it through',
+      'Meal planning, travel, big purchases — all faster',
     ],
-    outcome: '→ Less Mental Overhead Daily',
+    outcome: '→ Less mental overhead daily',
   },
 ];
 
@@ -52,8 +52,8 @@ export function PersonalLife() {
       <div className="eyebrow">Beyond Work</div>
       <h2 className="sec-title">Personal Life</h2>
       <p className="sec-sub">
-        The Same Habits I Use At Work Are Already Part Of How I Live Outside It
-        Too.
+        The same habits I use at work are already part of how I live outside it
+        too.
       </p>
 
       <div className="personal-grid">

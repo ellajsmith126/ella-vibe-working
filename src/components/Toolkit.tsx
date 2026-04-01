@@ -20,11 +20,11 @@ const categories: CategoryData[] = [
     catClass: 'cat-t',
     tileClass: 'tile-t',
     tiles: [
-      { abbr: 'CP', name: 'Claude Projects', bullets: ['Context + Style Guide Loaded', 'Remembers Role & Preferences', 'Replicated Across 4 Projects'], outcome: '→ 3× More Relevant Output' },
-      { abbr: 'AC', name: 'AI Coaching', bullets: ['Surfaces Habits & Patterns', 'Structured Self-Reflection', 'Flags Self-Doubt As A Pattern'], outcome: '→ Bottlenecks Spotted & Fixed' },
-      { abbr: 'SF', name: 'Solving Framework', bullets: ['Structured Problem Approach', 'Applied From Day One At JLS', 'Removes Ad-Hoc Decisions'], outcome: '→ Systematic From The Start' },
-      { abbr: 'SC', name: 'Specialist Chains', bullets: ['Breaks Complex Areas Into Components', 'Goes Deep On Each Layer', 'Used For Social Media & Strategy'], outcome: '→ Expert Depth, No Course Needed' },
-      { abbr: 'DR', name: 'Deep Research', bullets: ['Expert-Level Knowledge Fast', 'No More Reading Bottleneck', 'Hours Not Months To Learn'], outcome: '→ Knowledge On Demand' },
+      { abbr: 'CP', name: 'Claude Projects', bullets: ['Context + style guide loaded', 'Remembers role & preferences', 'Replicated across 4 projects'], outcome: '→ 3× more relevant output' },
+      { abbr: 'AC', name: 'AI Coaching', bullets: ['Surfaces habits & patterns', 'Structured self-reflection', 'Flags self-doubt as a pattern'], outcome: '→ Bottlenecks spotted & fixed' },
+      { abbr: 'SF', name: 'Solving Framework', bullets: ['Structured problem approach', 'Applied from day one at JLS', 'Removes ad-hoc decisions'], outcome: '→ Systematic from the start' },
+      { abbr: 'SC', name: 'Specialist Chains', bullets: ['Breaks complex areas into components', 'Goes deep on each layer', 'Used for social media & strategy'], outcome: '→ Expert depth, no course needed' },
+      { abbr: 'DR', name: 'Deep Research', bullets: ['Expert-level knowledge fast', 'No more reading bottleneck', 'Hours not months to learn'], outcome: '→ Knowledge on demand' },
     ],
   },
   {
@@ -32,9 +32,9 @@ const categories: CategoryData[] = [
     catClass: 'cat-w',
     tileClass: 'tile-w',
     tiles: [
-      { abbr: 'AD', name: 'AI-Written Docs', bullets: ['All Docs Routed Through AI', 'Style Guide Pre-Loaded', 'Briefs, Reports, Comms, Plans'], outcome: '→ 20 Mins Not 90' },
-      { abbr: 'DI', name: 'Dictation', bullets: ['Speak Instead Of Type', 'Faster For Emails & Long Comms', 'More Natural, Less Friction'], outcome: '→ Faster, More Natural Input' },
-      { abbr: 'SP', name: 'Super Prompts', bullets: ['Structured For Deep Analysis', 'Expert Frameworks On Demand', 'Consistent Output Every Time'], outcome: '→ Expert Output, First Draft' },
+      { abbr: 'AD', name: 'AI-Written Docs', bullets: ['All docs routed through AI', 'Style guide pre-loaded', 'Briefs, reports, comms, plans'], outcome: '→ 20 mins not 90' },
+      { abbr: 'DI', name: 'Dictation', bullets: ['Speak instead of type', 'Faster for emails & long comms', 'More natural, less friction'], outcome: '→ Faster, more natural input' },
+      { abbr: 'SP', name: 'Super Prompts', bullets: ['Structured for deep analysis', 'Expert frameworks on demand', 'Consistent output every time'], outcome: '→ Expert output, first draft' },
     ],
   },
   {
@@ -42,8 +42,8 @@ const categories: CategoryData[] = [
     catClass: 'cat-b',
     tileClass: 'tile-b',
     tiles: [
-      { abbr: 'CC', name: 'Claude Code', bullets: ['Landing Pages & Web Apps', 'Built This Portfolio Solo', 'PRDs → Working Product'], outcome: '→ Non-Developer Who Builds' },
-      { abbr: 'GA', name: 'Google AI Studio', bullets: ['Prototype & Test Prompts Fast', 'Experiment With Models', 'Low-Friction Testing Environment'], outcome: '→ Fast Experimentation' },
+      { abbr: 'CC', name: 'Claude Code', bullets: ['Landing pages & web apps', 'Built this portfolio solo', 'PRDs → working product'], outcome: '→ Non-developer who builds' },
+      { abbr: 'GA', name: 'Google AI Studio', bullets: ['Prototype & test prompts fast', 'Experiment with models', 'Low-friction testing environment'], outcome: '→ Fast experimentation' },
     ],
   },
 ];
@@ -79,8 +79,8 @@ export function Toolkit() {
       <div className="eyebrow">Tools & Stack</div>
       <h2 className="sec-title">My AI Toolkit</h2>
       <p className="sec-sub">
-        10 Tools Across Thinking, Writing, Building & Organising — Click Any
-        To Expand
+        10 tools across thinking, writing, building &amp; organising — click any
+        to expand
       </p>
 
       {categories.map((cat, ci) => (
