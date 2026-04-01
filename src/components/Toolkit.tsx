@@ -48,13 +48,11 @@ const categories: CategoryData[] = [
   },
 ];
 
-function Tile({ tile, tileClass }: { tile: TileData; tileClass: string }) {
-  const [open, setOpen] = useState(false);
-
+function Tile({ tile, tileClass, open, onToggle }: { tile: TileData; tileClass: string; open: boolean; onToggle: () => void }) {
   return (
     <div
       className={`tile ${tileClass}${open ? ' open' : ''}`}
-      onClick={() => setOpen(!open)}
+      onClick={onToggle}
     >
       <div className="tile-header">
         <div className="tile-icon">{tile.abbr}</div>
@@ -74,6 +72,9 @@ function Tile({ tile, tileClass }: { tile: TileData; tileClass: string }) {
 }
 
 export function Toolkit() {
+  // single open tile across the whole toolkit: "catIndex-tileIndex" or null
+  const [openTile, setOpenTile] = useState<string | null>(null);
+
   return (
     <section className="section" id="stack">
       <div className="eyebrow">Tools &amp; Stack</div>
@@ -91,9 +92,18 @@ export function Toolkit() {
         >
           <div className={`cat-label ${cat.catClass}`}>{cat.label}</div>
           <div className="tiles-row">
-            {cat.tiles.map((tile, ti) => (
-              <Tile key={ti} tile={tile} tileClass={cat.tileClass} />
-            ))}
+            {cat.tiles.map((tile, ti) => {
+              const key = `${ci}-${ti}`;
+              return (
+                <Tile
+                  key={ti}
+                  tile={tile}
+                  tileClass={cat.tileClass}
+                  open={openTile === key}
+                  onToggle={() => setOpenTile(openTile === key ? null : key)}
+                />
+              );
+            })}
           </div>
         </div>
       ))}

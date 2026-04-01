@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 interface BeforeAfterData {
   accentColor: string;
   title: string;
@@ -38,27 +40,32 @@ const cards: BeforeAfterData[] = [
 ];
 
 function BeforeAfterCard({ card }: { card: BeforeAfterData }) {
+  const [showAfter, setShowAfter] = useState(false);
+  const items = showAfter ? card.after : card.before;
+
   return (
     <div className="ba-card">
       <div className="ba-area-label">
         <span className="ba-accent" style={{ background: card.accentColor }} />
         <span className="ba-area-title">{card.title}</span>
       </div>
-      <div className="ba-header">
-        <div className="ba-tag ba-before">Before</div>
-        <div className="ba-tag ba-after">After</div>
-      </div>
-      <div className="ba-body">
-        <div className="ba-cell">
-          <ul>
-            {card.before.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+      <div className="ba-toggle-row">
+        <div
+          className={`ba-switch${showAfter ? ' ba-switch-after' : ''}`}
+          onClick={() => setShowAfter(!showAfter)}
+        >
+          <div className="ba-switch-slider" />
+          <span className="ba-switch-label ba-switch-label-before">Before</span>
+          <span className="ba-switch-label ba-switch-label-after">After</span>
         </div>
-        <div className="ba-cell ba-right">
+      </div>
+      <div className="ba-content-wrap">
+        <div
+          className="ba-content"
+          key={showAfter ? 'after' : 'before'}
+        >
           <ul>
-            {card.after.map((item, i) => (
+            {items.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
@@ -73,7 +80,7 @@ export function Impact() {
   return (
     <section className="section" id="impact">
       <div className="eyebrow">Impact</div>
-      <h2 className="sec-title">Before → After</h2>
+      <h2 className="sec-title">Before &rarr; After</h2>
       <p className="sec-sub">What actually changed</p>
 
       <div className="stats-strip">
@@ -85,7 +92,7 @@ export function Impact() {
         </div>
         <div className="big-stat bs2">
           <div className="big-num">
-            <span style={{ color: '#ec4899' }}>↑</span>89%
+            <span style={{ color: '#ec4899' }}>&uarr;</span>89%
           </div>
           <div className="big-label">Confidence (self-assessed)</div>
         </div>
